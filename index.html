@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Prestaciones Laborales República Dominicana</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Calculadora de Prestaciones Laborales</h1>
+    <p>República Dominicana</p>
+  </header>
+
+  <main>
+    <section class="calculadora">
+      <label for="salario">Salario mensual (RD$)</label>
+      <input type="number" id="salario" placeholder="Ejemplo: 30000">
+
+      <label for="anos">Años completos trabajados</label>
+      <input type="number" id="anos" placeholder="Ejemplo: 3" min="0">
+
+      <label for="meses">Meses adicionales (0 a 11)</label>
+      <input type="number" id="meses" placeholder="Ejemplo: 4" min="0" max="11">
+
+      <label for="tipo">Tipo de salida</label>
+      <select id="tipo">
+        <option value="desahucio">Desahucio (el empleador termina el contrato)</option>
+        <option value="renuncia">Renuncia (el trabajador se va)</option>
+      </select>
+
+      <label for="mesesAno">Meses trabajados este año (0 a 12)</label>
+      <input type="number" id="mesesAno" placeholder="Ejemplo: 5" min="0" max="12">
+
+      <button onclick="calcular()">Calcular</button>
+
+      <div id="resultado"></div>
+    </section>
+  </main>
+  <article class="guia">
+    <h2>¿Cómo se calculan las prestaciones laborales en República Dominicana?</h2>
+    <p>Las prestaciones laborales son los pagos que le corresponden a un trabajador cuando termina su contrato, según el Código de Trabajo (Ley 16-92). Cuáles recibes depende de cómo termina el contrato: por desahucio (el empleador termina la relación sin causa) o por renuncia.</p>
+
+    <h3>1. Salario diario</h3>
+    <p>Todo se calcula a partir del salario diario ordinario. Se obtiene dividiendo el salario mensual entre <strong>23.83</strong>, que es el promedio legal de días laborables al mes.</p>
+
+    <h3>2. Preaviso (Art. 76)</h3>
+    <p>Es el aviso que el empleador debe dar antes de terminar el contrato. Si no lo da, debe pagarlo. Los días dependen de la antigüedad:</p>
+    <table>
+      <tr><th>Antigüedad</th><th>Días de preaviso</th></tr>
+      <tr><td>De 3 a 6 meses</td><td>5 días</td></tr>
+      <tr><td>De 6 meses a 1 año</td><td>7 días</td></tr>
+      <tr><td>De 1 a 5 años</td><td>14 días</td></tr>
+      <tr><td>5 años o más</td><td>28 días</td></tr>
+    </table>
+
+    <h3>3. Cesantía (Art. 80)</h3>
+    <p>Es la indemnización que paga el empleador cuando ejerce el desahucio. <strong>No se paga en caso de renuncia.</strong></p>
+    <table>
+      <tr><th>Antigüedad</th><th>Días de salario</th></tr>
+      <tr><td>De 3 a 6 meses</td><td>6 días</td></tr>
+      <tr><td>De 6 meses a 1 año</td><td>13 días</td></tr>
+      <tr><td>De 1 a 5 años</td><td>21 días por cada año</td></tr>
+      <tr><td>5 años o más</td><td>23 días por cada año</td></tr>
+    </table>
+    <p>Toda fracción de año mayor de tres meses se paga con la escala de 6 días (si la fracción es de hasta 6 meses) o de 13 días (si es de más de 6 meses).</p>
+
+    <h3>4. Vacaciones (Arts. 177 al 180)</h3>
+    <p>Después de un año de trabajo corresponden 14 días laborables de vacaciones, y 18 días después de cinco años. Si el contrato termina y te quedan vacaciones sin disfrutar, se pagan de forma proporcional. Esto se paga en cualquier tipo de salida, incluida la renuncia.</p>
+
+    <h3>5. Regalía pascual</h3>
+    <p>También llamada salario de Navidad. Equivale a la doceava parte del salario ordinario devengado durante el año. Si terminas el contrato antes de diciembre, se paga la parte proporcional a los meses trabajados.</p>
+
+    <h3>Ejemplo práctico</h3>
+    <p>Un trabajador con salario de RD$30,000 mensuales, 3 años y 4 meses de antigüedad, despedido por desahucio en mayo (5 meses trabajados en el año):</p>
+    <table>
+      <tr><th>Concepto</th><th>Cálculo</th><th>Monto</th></tr>
+      <tr><td>Preaviso</td><td>14 días × RD$1,258.92</td><td>RD$17,624.84</td></tr>
+      <tr><td>Cesantía</td><td>(3 × 21) + 6 = 69 días</td><td>RD$86,865.30</td></tr>
+      <tr><td>Vacaciones</td><td>4.67 días</td><td>RD$5,874.95</td></tr>
+      <tr><td>Regalía pascual</td><td>30,000 × 5 ÷ 12</td><td>RD$12,500.00</td></tr>
+      <tr><td><strong>Total</strong></td><td></td><td><strong>RD$122,865.09</strong></td></tr>
+    </table>
+
+    <h3>Preguntas frecuentes</h3>
+    <h4>¿Recibo cesantía si renuncio?</h4>
+    <p>No. La cesantía solo se paga cuando el empleador ejerce el desahucio. Al renunciar recibes vacaciones no disfrutadas y regalía pascual proporcional.</p>
+    <h4>¿Por qué se divide entre 23.83 y no entre 30?</h4>
+    <p>Porque el Código de Trabajo calcula sobre días laborables, no sobre días del calendario.</p>
+    <h4>¿Este cálculo es oficial?</h4>
+    <p>Es una estimación basada en el Código de Trabajo. Para un caso concreto, consulta al Ministerio de Trabajo o a un abogado laboralista.</p>
+
+    <p class="aviso">Última actualización: septiembre de 2026.</p>
+  </article>
+  <script src="calculadora.js"></script>
+</body>
+</html>
