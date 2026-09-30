@@ -102,3 +102,12 @@ select {
 }
 
 .guia th { background: #eef2f9; }
+.pie {
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.pie a, .volver { color: #0b3d91; }
+header .volver { color: white; }
