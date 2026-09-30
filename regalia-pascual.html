@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Regalía Pascual República Dominicana 2026</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Calculadora de Regalía Pascual</h1>
+    <p>República Dominicana · Salario de Navidad 2026</p>
+  </header>
+
+  <nav class="menu">
+    <a href="index.html">Prestaciones laborales</a>
+    <a href="salario-neto.html">Salario neto</a>
+    <a href="regalia-pascual.html">Regalía pascual</a>
+  </nav>
+
+  <main>
+    <section class="calculadora">
+      <label for="salario">Salario mensual (RD$)</label>
+      <input type="number" id="salario" placeholder="Ejemplo: 30000">
+
+      <label for="meses">Meses trabajados en el año (1 a 12)</label>
+      <input type="number" id="meses" placeholder="Ejemplo: 12" min="1" max="12">
+
+      <button onclick="calcularRegalia()">Calcular</button>
+
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <article class="guia">
+    <h2>¿Cómo se calcula la regalía pascual en República Dominicana?</h2>
+    <p>La regalía pascual, también conocida como salario de Navidad, es un pago anual que todo empleador debe hacer a sus trabajadores. Su monto equivale a la doceava parte (1/12) del salario ordinario devengado durante el año calendario, y debe pagarse a más tardar el <strong>20 de diciembre</strong>.</p>
+
+    <h3>Fórmula</h3>
+    <p><strong>Regalía pascual = salario ordinario devengado en el año ÷ 12</strong></p>
+    <p>Si trabajaste todo el año con el mismo salario, la regalía es igual a un salario mensual completo. Si trabajaste menos meses, se paga de forma proporcional.</p>
+
+    <h3>Ejemplos</h3>
+    <table>
+      <tr><th>Salario mensual</th><th>Meses trabajados</th><th>Regalía pascual</th></tr>
+      <tr><td>RD$30,000</td><td>12</td><td>RD$30,000.00</td></tr>
+      <tr><td>RD$30,000</td><td>6</td><td>RD$15,000.00</td></tr>
+      <tr><td>RD$45,000</td><td>8</td><td>RD$30,000.00</td></tr>
+    </table>
+
+    <h3>Preguntas frecuentes</h3>
+    <h4>¿Tengo derecho a regalía si trabajé solo unos meses?</h4>
+    <p>Sí. Se paga de forma proporcional al tiempo trabajado durante el año.</p>
+    <h4>¿Y si renuncio o me despiden antes de diciembre?</h4>
+    <p>La regalía proporcional se paga igual, en cualquier tipo de salida. Por eso también forma parte de la calculadora de prestaciones laborales de este sitio.</p>
+    <h4>¿Y si mi salario cambió durante el año?</h4>
+    <p>Suma todo lo que ganaste de salario ordinario en el año y divídelo entre 12.</p>
+    <p class="aviso">Cálculo referencial basado en el Código de Trabajo. Para un caso concreto consulta al Ministerio de Trabajo o a un abogado. Última actualización: septiembre de 2026.</p>
+  </article>
+
+  <footer class="pie">
+    <a href="privacidad.html">Política de privacidad</a> ·
+    <a href="contacto.html">Contacto</a> ·
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+  </footer>
+
+  <script src="regalia-pascual.js"></script>
+</body>
+</html>
