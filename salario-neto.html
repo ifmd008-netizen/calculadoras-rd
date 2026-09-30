@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Salario Neto República Dominicana 2026 (TSS e ISR)</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Calculadora de Salario Neto</h1>
+    <p>República Dominicana · Escala 2026</p>
+  </header>
+
+  <nav class="menu">
+    <a href="index.html">Prestaciones laborales</a>
+    <a href="salario-neto.html">Salario neto</a>
+  </nav>
+
+  <main>
+    <section class="calculadora">
+      <label for="bruto">Salario bruto mensual (RD$)</label>
+      <input type="number" id="bruto" placeholder="Ejemplo: 75000">
+      <button onclick="calcularNeto()">Calcular</button>
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <article class="guia">
+    <h2>¿Cómo se calcula el salario neto en República Dominicana?</h2>
+    <p>El salario neto es lo que realmente recibes después de los descuentos de ley. Se parte del salario bruto y se restan los aportes a la Seguridad Social y el Impuesto Sobre la Renta (ISR).</p>
+
+    <h3>1. Aportes a la Seguridad Social (TSS)</h3>
+    <table>
+      <tr><th>Concepto</th><th>Porcentaje</th></tr>
+      <tr><td>AFP (fondo de pensiones)</td><td>2.87%</td></tr>
+      <tr><td>SFS (seguro de salud)</td><td>3.04%</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>5.91%</strong></td></tr>
+    </table>
+    <p>Estos aportes tienen un tope de salario cotizable, por lo que quienes ganan montos muy altos no pagan el porcentaje sobre todo su salario.</p>
+
+    <h3>2. Impuesto Sobre la Renta (ISR)</h3>
+    <p>El ISR se calcula sobre el salario bruto menos los aportes de la TSS, proyectado a un año (multiplicado por 12). Luego se aplica la escala de la DGII y el resultado se divide entre 12 para obtener la retención mensual.</p>
+    <table>
+      <tr><th>Ingreso anual</th><th>Tasa</th></tr>
+      <tr><td>Hasta RD$416,220.00</td><td>Exento</td></tr>
+      <tr><td>De RD$416,220.01 a RD$624,329.00</td><td>15% del excedente de RD$416,220</td></tr>
+      <tr><td>De RD$624,329.01 a RD$867,123.00</td><td>RD$31,216.35 + 20% del excedente de RD$624,329</td></tr>
+      <tr><td>Más de RD$867,123.00</td><td>RD$79,775.15 + 25% del excedente de RD$867,123</td></tr>
+    </table>
+    <p>Esto significa que si tu salario mensual, después de los descuentos de la TSS, es de hasta RD$34,685, no pagas ISR.</p>
+
+    <h3>Ejemplo práctico</h3>
+    <p>Salario bruto de RD$75,000 al mes:</p>
+    <table>
+      <tr><th>Concepto</th><th>Monto</th></tr>
+      <tr><td>AFP (2.87%)</td><td>RD$2,152.50</td></tr>
+      <tr><td>SFS (3.04%)</td><td>RD$2,280.00</td></tr>
+      <tr><td>Base para ISR (mensual)</td><td>RD$70,567.50</td></tr>
+      <tr><td>Base anual (× 12)</td><td>RD$846,810.00</td></tr>
+      <tr><td>ISR anual</td><td>RD$75,712.55</td></tr>
+      <tr><td>ISR mensual</td><td>RD$6,309.38</td></tr>
+      <tr><td><strong>Salario neto</strong></td><td><strong>RD$64,258.12</strong></td></tr>
+    </table>
+
+    <h3>Preguntas frecuentes</h3>
+    <h4>¿El ISR se calcula sobre el salario bruto?</h4>
+    <p>No. Primero se restan los aportes de AFP y SFS, y el ISR se calcula sobre lo que queda.</p>
+    <h4>¿Esta calculadora incluye horas extras, bonos o deducciones?</h4>
+    <p>No. Es una estimación para un salario fijo mensual, sin comisiones, horas extras ni deducciones especiales.</p>
+    <h4>¿La escala cambia cada año?</h4>
+    <p>Sí. La DGII puede modificar la escala, por eso este sitio indica el año de cada cálculo. Esta versión corresponde a 2026.</p>
+    <p class="aviso">Cálculo referencial. Consulta la DGII o un contador para tu caso concreto. Última actualización: septiembre de 2026.</p>
+  </article>
+
+  <footer class="pie">
+    <a href="privacidad.html">Política de privacidad</a> ·
+    <a href="contacto.html">Contacto</a> ·
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+  </footer>
+
+  <script src="salario-neto.js"></script>
+</body>
+</html>
