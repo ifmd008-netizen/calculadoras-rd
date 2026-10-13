@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Vacaciones República Dominicana 2026</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Calculadora de Vacaciones</h1>
+    <p>República Dominicana · Código de Trabajo</p>
+  </header>
+
+  <nav class="menu">
+    <a href="index.html">Prestaciones laborales</a>
+    <a href="salario-neto.html">Salario neto</a>
+    <a href="regalia-pascual.html">Regalía pascual</a>
+    <a href="horas-extras.html">Horas extras</a>
+    <a href="vacaciones.html">Vacaciones</a>
+  </nav>
+
+  <main>
+    <section class="calculadora">
+      <label for="salario">Salario mensual (RD$)</label>
+      <input type="number" id="salario" placeholder="Ejemplo: 30000">
+
+      <label for="tipo">¿Qué quieres calcular?</label>
+      <select id="tipo">
+        <option value="anual">Vacaciones anuales (año de servicio cumplido)</option>
+        <option value="proporcional">Vacaciones proporcionales (salida de la empresa)</option>
+      </select>
+
+      <label for="anos">Años completos trabajados</label>
+      <input type="number" id="anos" placeholder="Ejemplo: 3" min="0">
+
+      <label for="meses">Meses adicionales (0 a 11, solo para proporcionales)</label>
+      <input type="number" id="meses" placeholder="Ejemplo: 4" min="0" max="11">
+
+      <button onclick="calcularVacaciones()">Calcular</button>
+
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <article class="guia">
+    <h2>¿Cuántos días de vacaciones me corresponden en República Dominicana?</h2>
+    <p>Todo trabajador tiene derecho a vacaciones pagadas después de cumplir un año de servicio continuo. La cantidad de días depende de tu antigüedad, según los artículos 177 al 180 del Código de Trabajo.</p>
+
+    <h3>Días de vacaciones por antigüedad</h3>
+    <table>
+      <tr><th>Antigüedad</th><th>Días laborables de vacaciones</th></tr>
+      <tr><td>De 1 año a menos de 5 años</td><td>14 días</td></tr>
+      <tr><td>5 años o más</td><td>18 días</td></tr>
+    </table>
+
+    <h3>Cómo se calcula el pago</h3>
+    <p><strong>Pago de vacaciones = días de vacaciones × (salario mensual ÷ 23.83)</strong></p>
+    <p>El 23.83 es el promedio legal de días laborables al mes.</p>
+
+    <h3>Vacaciones proporcionales</h3>
+    <p>Si el contrato termina antes de cumplir el primer año, o si te quedan vacaciones sin disfrutar al irte, se pagan de forma proporcional al tiempo trabajado. Esto se paga en cualquier tipo de salida, incluida la renuncia.</p>
+    <table>
+      <tr><th>Tiempo trabajado (primer año)</th><th>Días de vacaciones</th></tr>
+      <tr><td>Más de 5 meses</td><td>6 días</td></tr>
+      <tr><td>Más de 6 meses</td><td>7 días</td></tr>
+      <tr><td>Más de 7 meses</td><td>8 días</td></tr>
+      <tr><td>Más de 8 meses</td><td>9 días</td></tr>
+      <tr><td>Más de 9 meses</td><td>10 días</td></tr>
+      <tr><td>Más de 10 meses</td><td>11 días</td></tr>
+    </table>
+
+    <h3>Ejemplo práctico</h3>
+    <p>Salario de RD$30,000 mensuales y 3 años de servicio:</p>
+    <table>
+      <tr><th>Paso</th><th>Cálculo</th><th>Resultado</th></tr>
+      <tr><td>Salario diario</td><td>30,000 ÷ 23.83</td><td>RD$1,258.92</td></tr>
+      <tr><td>Días de vacaciones</td><td>De 1 a 5 años</td><td>14 días</td></tr>
+      <tr><td><strong>Pago de vacaciones</strong></td><td>14 × 1,258.92</td><td><strong>RD$17,624.84</strong></td></tr>
+    </table>
+
+    <h3>Preguntas frecuentes</h3>
+    <h4>¿Los días de vacaciones incluyen sábados y domingos?</h4>
+    <p>No. Son días laborables, así que se cuentan solo los días en que normalmente trabajas.</p>
+    <h4>¿Se pagan las vacaciones si renuncio?</h4>
+    <p>Sí. Las vacaciones no disfrutadas se pagan de forma proporcional sin importar cómo termine el contrato.</p>
+    <h4>¿Y si trabajé menos de cinco meses?</h4>
+    <p>En ese caso todavía no se genera el derecho a vacaciones proporcionales.</p>
+    <p class="aviso">Cálculo referencial basado en el Código de Trabajo. Para un caso concreto consulta al Ministerio de Trabajo o a un abogado. Última actualización: octubre de 2026.</p>
+  </article>
+
+  <footer class="pie">
+    <a href="privacidad.html">Política de privacidad</a> ·
+    <a href="contacto.html">Contacto</a> ·
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+  </footer>
+
+  <script src="vacaciones.js"></script>
+</body>
+</html>
