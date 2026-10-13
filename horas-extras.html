@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Horas Extras República Dominicana 2026</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Calculadora de Horas Extras</h1>
+    <p>República Dominicana · Art. 203 del Código de Trabajo</p>
+  </header>
+
+  <nav class="menu">
+    <a href="index.html">Prestaciones laborales</a>
+    <a href="salario-neto.html">Salario neto</a>
+    <a href="regalia-pascual.html">Regalía pascual</a>
+    <a href="horas-extras.html">Horas extras</a>
+  </nav>
+
+  <main>
+    <section class="calculadora">
+      <label for="salario">Salario mensual (RD$)</label>
+      <input type="number" id="salario" placeholder="Ejemplo: 30000">
+
+      <label for="horas">Horas trabajadas en la semana</label>
+      <input type="number" id="horas" placeholder="Ejemplo: 48" min="0">
+
+      <label for="turno">Tipo de horario</label>
+      <select id="turno">
+        <option value="diurno">Diurno</option>
+        <option value="nocturno">Nocturno (9:00 p. m. a 6:00 a. m.)</option>
+      </select>
+
+      <label for="feriado">Horas trabajadas en feriado o día de descanso (opcional)</label>
+      <input type="number" id="feriado" placeholder="Ejemplo: 0" min="0">
+
+      <button onclick="calcularHorasExtras()">Calcular</button>
+
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <article class="guia">
+    <h2>¿Cómo se pagan las horas extras en República Dominicana?</h2>
+    <p>La jornada ordinaria de trabajo no puede pasar de 8 horas diarias ni de 44 horas semanales. Todo el tiempo trabajado por encima de esos límites debe pagarse como hora extraordinaria, según el artículo 203 del Código de Trabajo.</p>
+
+    <h3>Recargos por hora extra</h3>
+    <table>
+      <tr><th>Situación</th><th>Recargo</th><th>Se paga a</th></tr>
+      <tr><td>Más de 44 horas y hasta 68 horas por semana</td><td>35%</td><td>135% de la hora normal</td></tr>
+      <tr><td>Más de 68 horas por semana</td><td>100%</td><td>200% de la hora normal</td></tr>
+      <tr><td>Feriado o día de descanso</td><td>100%</td><td>200% de la hora normal</td></tr>
+      <tr><td>Horario nocturno (9 p. m. a 6 a. m.)</td><td>15% sobre la hora normal</td><td>115% de la hora normal</td></tr>
+    </table>
+
+    <h3>Cómo se calcula el valor de la hora</h3>
+    <p><strong>Valor de la hora = salario mensual ÷ 23.83 ÷ 8</strong></p>
+    <p>El 23.83 es el promedio legal de días laborables al mes, y 8 es la duración de la jornada diaria.</p>
+
+    <h3>Ejemplo práctico</h3>
+    <p>Salario mensual de RD$30,000 y 48 horas trabajadas en la semana, en horario diurno:</p>
+    <table>
+      <tr><th>Paso</th><th>Cálculo</th><th>Resultado</th></tr>
+      <tr><td>Valor de la hora normal</td><td>30,000 ÷ 23.83 ÷ 8</td><td>RD$157.36</td></tr>
+      <tr><td>Valor de la hora extra al 35%</td><td>157.36 × 1.35</td><td>RD$212.44</td></tr>
+      <tr><td>Horas extras de la semana</td><td>48 − 44</td><td>4 horas</td></tr>
+      <tr><td><strong>Pago por horas extras</strong></td><td>4 × 212.44</td><td><strong>RD$849.77</strong></td></tr>
+    </table>
+
+    <h3>Preguntas frecuentes</h3>
+    <h4>¿Las primeras 44 horas de la semana se pagan con recargo?</h4>
+    <p>No. Esas horas están incluidas en tu salario mensual. El recargo comienza a partir de la hora 45 de la semana.</p>
+    <h4>¿Qué pasa si trabajo de noche y además hago horas extras?</h4>
+    <p>Primero se calcula la hora nocturna (hora normal más 15%) y sobre ese valor se aplica el recargo de la hora extra.</p>
+    <h4>¿Todos los trabajadores tienen derecho a horas extras?</h4>
+    <p>No. Algunos puestos, como los de dirección o representación del empleador, están excluidos del límite de jornada. Ante cualquier duda, consulta al Ministerio de Trabajo.</p>
+    <p class="aviso">Cálculo referencial basado en el Código de Trabajo. Última actualización: octubre de 2026.</p>
+  </article>
+
+  <footer class="pie">
+    <a href="privacidad.html">Política de privacidad</a> ·
+    <a href="contacto.html">Contacto</a> ·
+    <a href="sobre-nosotros.html">Sobre nosotros</a>
+  </footer>
+
+  <script src="horas-extras.js"></script>
+</body>
+</html>
